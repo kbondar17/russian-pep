@@ -1,0 +1,85 @@
+{% extends 'appointments/persons/base.html' %}
+
+{% block card %}
+
+<div class="container" >
+  <div class="row">
+
+      <div class="col col-2">
+
+        <a href="javascript:history.back()" id="get_back_link_text">
+
+          
+          <div id='get_back_link_wrapper'>
+              <div class="get_back_button"> <h3>Назад</h3></div>
+          </div>
+
+        </a>
+
+    </div>
+
+  <div class="col col-7" id="card-wrapper">
+          <!-- <div class="col col-7"> -->
+            <h3>Событие</h3>
+            <br>
+            <h1></h1>
+            <form method="post">
+
+                {% csrf_token %}
+
+                <div class="mb-3">
+                  {{event.action}}
+                </div>
+                <div class="mb-3">
+                  {{event.name}}
+                </div>
+                
+                <div class="mb-3">
+                    {{event.app_line}}
+                </div>
+                <div class="mb-3">
+                  {{event.position}}
+                </div>
+              <div class="mb-3">
+                    {{event.date}}
+                </div>
+               
+                <div class="mb-3">
+                  <p>
+                        <a class="btn btn-secondary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                          Полный текст документа &#9660;
+                        </a>
+
+                  </p>
+
+                      <div class="collapse" id="collapseExample">
+                        {{event.full_text}}
+                        <br>
+                          {% if download_link %}
+                          <!-- <a href="{{ download_link }}"> <button  class="btn btn-primary">Скачать </button> </a> -->
+                        {% endif %}
+
+                        <button id="download_link" class="btn btn-primary"><a id='download_link' href="{{ download_link }}">скачать</a></button>                                                
+
+                      </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Сохранить изменения </button>
+                <!-- <button id="delete_event_button" type="button" class="btn btn-light">Удалить событие</button> -->
+                  
+            </form>
+            <br>
+            <br>
+            <br>
+            
+          </div>
+
+          <div class="col col-2"> </div>
+
+        </div>
+
+        </div>
+
+
+{% endblock %}
+

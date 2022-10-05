@@ -1,0 +1,58 @@
+{% extends 'appointments/persons/persons_list.html' %}
+{% load static %}
+
+{% block menu %}
+{% load my_tags %}
+
+
+<form action="GET">
+    <div class="form_wrapper">
+        <div class="input_wrapper">
+            <div class="buttons_wrapper">
+
+                <a href="{% url 'appointments:person-list' %}" class="navigation_btn"><div class="person_btn">
+                    Персоны
+                </div></a>
+           
+            <a href= "{% url 'appointments:show-all-events' %}" class="navigation_btn">
+            <div class="events_btn">
+            Все назначения
+        </div></a> 
+           
+        </div>
+        
+        <div>
+
+            <br>
+            <br>
+        </div>
+            <input id="input-tags" autocomplete="off" placeholder="имя" value="{{ name_search }}" name="name_search" >
+
+            <input id="input-tags-position" value="{{ position_search }}" autocomplete="off" placeholder="должность содержит" name="position_search" >
+
+
+    </div>
+
+    <div class="search_button_1">
+      <button type="submit" class="btn btn-primary">Искать</button>
+    </div>
+
+</div>
+</form>
+
+<script>
+    $(function () {
+      $("input.date_from").datepicker({
+        format:'yyyy-mm-dd',
+      });
+    });
+    $(function () {
+      $("input.date_to").datepicker({
+        format:'yyyy-mm-dd',
+      });
+    });
+
+</script>
+
+
+{% endblock %}

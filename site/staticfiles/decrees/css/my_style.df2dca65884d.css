@@ -1,0 +1,179 @@
+:root {
+  --upload-background: #FAFDFE;
+}
+
+
+.my {
+  border: 2px dashed black;
+}
+
+.col-4,
+.login-form {
+  padding-top: 5%;
+
+}
+
+.card {
+  border: 0px;
+}
+
+input[name="real_file_input"] {
+  visibility: hidden;
+}
+
+.choose_your_file {
+
+  /* border: 2px dashed purple; */
+}
+
+#uploaded_files_border {
+  /* border: 4px dashed blue; */
+}
+
+
+#download_table_cell {
+  font-size: large;
+  /* width: 200px; */
+
+
+}
+
+
+.col {
+  border: 2px dashed black;
+}
+
+.form-select {
+  input-font-size: 3100px
+}
+
+.temp {
+  border: 2px dashed red;
+  width: 300px;
+}
+
+#my_table {
+  table-color red;
+}
+
+
+#temp {
+  border: 2px dashed pink;
+
+}
+
+.btn-xlarge {
+  padding: 18px 28px;
+  /* //change this to your desired size */
+  font-size: 20px;
+  line-height: normal;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+}
+
+
+.input_box:hover {
+  background-color: gainsboro;
+}
+
+.input_box {
+  width: 300px;
+  height: 300px;
+  border-radius: 4px;
+  border: 2px dashed gray;
+
+}
+
+
+
+#my-dropzone {
+  margin-top: 5%;
+}
+
+input[name='my_uploader'] {
+  padding: 0;
+  background-color: #3498db;
+  background-image: 8121991;
+  background-image: -webkit-linear-gradient(#4aa3df 0%, #258cd1 100%);
+  background-image: -moz-linear-gradient(#4aa3df 0%, #258cd1 100%);
+  background-image: -o-linear-gradient(#4aa3df 0%, #258cd1 100%);
+  background-image: linear-gradient(#4aa3df 0%, #258cd1 100%);
+  -webkit-box-shadow: inset rgba(0, 0, 0, 0.2) 0 0 0 1px, rgba(52, 152, 219, 0.5) 0 0 5px;
+  -moz-box-shadow: inset rgba(0, 0, 0, 0.2) 0 0 0 1px, rgba(52, 152, 219, 0.5) 0 0 5px;
+  box-shadow: inset rgba(0, 0, 0, 0.2) 0 0 0 1px, rgba(52, 152, 219, 0.5) 0 0 5px;
+  -webkit-border-radius: 4px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 4px;
+  -moz-background-clip: padding;
+  border-radius: 4px;
+  background-clip: padding-box;
+  padding: 20px 20px;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+  font-family: Open Sans;
+
+}
+
+
+.file_in_queue {
+  /* border: 3px dashed purple; */
+}
+
+.dropzone {
+  border: 3px dashed #0087F7;
+  margin: 10%;
+  min-height: 400px;
+
+
+}
+
+.dropzone:hover .dz-filename {
+  background-color: var(--upload-background)
+}
+
+.dropzone:hover #file_img {
+  background-color: var(--upload-background)
+}
+
+.dropzone:hover .card-body {
+  /* box-shadow: 0px 5px 65px -21px rgba(34, 60, 80, 0.4) inset; */
+  background-color: var(--upload-background)
+}
+
+
+.dropzone:hover {
+  box-shadow: 0px 5px 65px -21px rgba(34, 60, 80, 0.4) inset;
+  background-color: var(--upload-background)
+}
+
+
+
+
+.drop_down_label {
+  font-size: 150%;
+}
+
+.select_option {
+  font-size: x-large;
+}
+
+
+
+
+
+.ldBar {
+  border: 3px dashed black;
+
+}
+
+
+.progress-bar {
+  animation: 1s linear infinite progress-bar-stripes;
+  width: 100;
+}
+
+.doc_link {
+  color: black;
+}

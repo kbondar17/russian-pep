@@ -1,0 +1,169 @@
+.test-col{
+    border: 2px solid ghostwhite;
+}
+
+.pagination{
+    display:  flex;
+    justify-content: center;
+
+    /* border: 2px dashed black; */
+    
+}
+
+.input_wrapper input{
+    border: 1px solid #d0d0d0;
+    padding: 8px 8px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    box-sizing: border-box;
+    box-shadow: none;
+    border-radius: 3px;
+    display: flex;
+    flex-wrap: wrap;
+} 
+
+
+/* .form_wrapper > input:focus {
+    outline: none;
+    
+}  */
+
+
+.form_wrapper{
+        /* border: 2px dashed black; */
+        display: flex;
+        flex-direction: column;
+        height: 400px;       
+        /* justify-content: space-around; */
+        align-items: stretch;
+
+}
+
+.select_wrapper{
+    margin-left: 0px;
+    margin-top: 10px
+} 
+
+
+.search_button_1{
+    margin-top: 13px;
+    margin-left: -2px;
+
+}
+
+
+
+.form-control:disabled, .form-control[readonly] {
+    background-color: #f2f2f26e;
+    /* opacity: 0.4; */
+}
+
+
+.close_date_button{
+    width: 15px;
+    position: absolute;
+    right: 20px;
+    height: -15px;
+    z-index: 999999;
+    color: #A6BEF5;
+    /* color: aqua; */
+    /* fill: aqua; */
+}
+
+.bt{
+    color: green;
+    
+}
+
+#card-wrapper{
+    /* width: 120%; */
+    border: 2px solid #c9cdd1cc;    
+    border-radius: 1.6%;
+}
+.row{
+    display: flexbox;
+    justify-content: space-around;
+    justify-items: stretch;
+}
+.col{
+    /* border: 2px solid green;     */
+}
+
+#back_button{
+    opacity: 75%;
+    height: 350px;
+    border: 2px solid #c9cdd1cc;    
+    border-radius: 7%;
+    
+}
+
+
+.back_button_wrapper{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+
+}
+
+#get_back_link_wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    justify-content:center;
+    align-items: center;
+    height: 100%;
+    width: 220%;
+    margin-left: -200px;
+
+}
+#get_back_link_text:hover{
+    text-decoration: none;
+}
+
+#get_back_link_wrapper:hover{    
+    /* border: 2px solid #c9cdd1cc;     */
+    border-radius: 3%;
+    background-color: #E6EDFF;
+    text-decoration: none;
+}
+
+.get_back_button{
+    padding-bottom: 10%;
+    opacity: 35%;
+    text-decoration: none;
+}
+
+
+#delete_event_button{
+    color: red;
+    
+}
+
+.ts-dropdown, .ts-control, .ts-control input {
+    font-family: inherit;
+    font-size: 15px;
+    line-height: 18px;
+
+}
+
+
+#download_link{
+    color: aliceblue;
+    /* font-size: small; */
+    /* background-color: red; */
+    
+}
+
+#download_link:hover{
+    text-decoration: none;
+}
+
+[data-bold="1"] {    
+
+    
+    background-color: red; 
+}

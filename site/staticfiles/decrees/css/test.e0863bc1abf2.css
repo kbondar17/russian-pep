@@ -1,0 +1,7 @@
+ul {
+    border: 13px dashed black;
+}
+
+#drop_zone_field {
+    z-index: 999;
+}

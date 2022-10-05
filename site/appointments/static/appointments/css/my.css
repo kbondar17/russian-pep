@@ -1,0 +1,59 @@
+/* Rectangle 2 */
+
+.doc_bg{
+    /* position: relative;
+     */
+    /* height: 426px;
+    left: 328px;
+    top: 57px;
+         */
+     padding: -30px;
+     /* background: #E1E7F0; */
+    border-radius: 20px;
+    /* margin: -10px;  */
+    border: 1.5px dashed navy;
+}
+
+.doc_text{
+    width: 80%;
+    margin-left: 10%;
+    /* border: 2px dashed red; */
+        
+}
+
+/* Rectangle 2 */
+
+a{
+color: black;
+    
+}
+
+
+.date_but{
+    /* border: 2px dashed red; */
+   display: flex;
+   flex-direction: row;
+}
+
+
+.person_btn, .events_btn{
+    border: 1px solid lightgray;
+
+    height: 100px;
+    font-size: x-large;
+
+}
+
+.person_btn:hover, .events_btn:hover{
+    background-color: #E6EDFF;
+    box-shadow: inset 0 0 3px navy;
+    
+}
+
+.navigation_btn:hover{
+    text-decoration: none;
+}
+
+#person_table{
+    font-size: 120%;
+}

@@ -1,0 +1,150 @@
+{% extends 'appointments/persons/main.html' %}
+{% load static %} 
+
+
+{% block table %}
+
+
+{% load my_tags %}
+<div class="table_wrapper">
+  
+  <table class="table table-sm" id="person_table">
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">Имя</th>
+        <th scope="col">Регион</th>
+        <th scope="col">Кол-во назначений</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    {% for pers in persons %}
+    <tr>
+        <td>{{pers.id}}</td>
+        <td>
+        
+          <a href="{% url 'appointments:person-detail' pers.pk  %}">{{pers.name}}</a>
+          
+        
+        </td>
+        <td>Федеральный</td>
+        
+        <td>{{pers.appoints_count}}</td>
+        
+      
+        
+    </tr>
+    {% endfor %}
+    </tbody>
+    </table>
+
+</div>
+
+{% if not persons %}
+<h4>таких событий нет</h4>
+{% endif %}
+
+    <script>
+        new TomSelect("#select-beast-empty",{
+	allowEmptyOption: true,
+	create: true
+            });
+
+</script>
+
+<script>
+    new TomSelect("#input-tags",{
+	persist: false,
+	createOnBlur: true,
+	create: true
+});
+
+</script>
+
+<script>
+  new TomSelect("#input-tags-position",{
+persist: false,
+createOnBlur: true,
+create: true
+});
+</script>
+{% if persons %}
+
+
+<div class="pagination">
+
+    <section class="p-4 d-flex justify-content-center mb-4">
+      <nav aria-label="Page navigation example">
+        <ul class="pagination mb-0">
+
+        {% if page_obj.has_previous %}
+
+        <li>
+            {% if page_obj.number > 3 %}
+                <a class="page-link" href="{% my_relative_url 1 'page' request.GET.urlencode %}" aria-label="Next">
+                    <span aria-hidden="true"> 1 </span>
+                    </a>
+                </li>
+            {% endif %}
+    
+            <li class="page-item">
+            <a class="page-link" href="{% my_relative_url page_obj.previous_page_number 'page' request.GET.urlencode %}" aria-label="Previous">
+              <span aria-hidden="true"> < </span>
+            </a>
+          </li>
+          
+        <!-- <li class="page-item"><a class="page-link" href="{% my_relative_url page_obj.previous_page_number 'page' request.GET.urlencode %}"> если есть прр{{page_obj.number|add:"-1"}}</a></li> -->
+
+
+        {% endif %}
+
+        
+        {% if page_obj.paginator.page_range|length < 4 %}
+          {% for page in page_obj.paginator.page_range %}
+                {%  if page == page_obj.number %}
+               <b><li   class="page-item"><a class="page-link" href="{% my_relative_url page 'page' request.GET.urlencode %}">{{page}}</a></li></b> 
+                {% else %}  
+                <li   class="page-item"><a class="page-link" href="{% my_relative_url page 'page' request.GET.urlencode %}">{{page}}</a></li>
+ 
+                {% endif %}
+                
+            {% endfor %}
+        
+        {% else %}  
+            <!-- ТЕКУЩАЯ СТРАНИЦА -->
+          <b>  <li class="page-item" id="current_page"><a  class="page-link" href="#">{{page_obj.number}}</a></li></b>
+        
+        {% endif %}
+        
+
+          {% if page_obj.has_next %}
+            <!-- следующая страница -->
+            <li class="page-item"><a class="page-link" href="{% my_relative_url page_obj.next_page_number 'page' request.GET.urlencode %}"> > </a></li>
+          
+                 
+                {% if page_obj.number|add:'1' < page_obj.paginator.page_range|length %}
+
+                      <li class="page-item"><a class="page-link" href="{% my_relative_url page_obj.paginator.page_range|length 'page' request.GET.urlencode %}"> {{page_obj.paginator.page_range|length}} </a></li>
+
+                  {% endif %}
+          
+          {% endif %}
+
+        </ul>
+
+        
+      </nav>
+    </section>
+</div>
+
+
+{% endif %}
+
+    <script type="text/javascript" src="{% static 'decrees/js/declarator.js' %}"></script>
+
+    
+
+    
+  
+{% endblock %}

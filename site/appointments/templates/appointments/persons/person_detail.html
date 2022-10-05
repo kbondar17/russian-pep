@@ -1,0 +1,89 @@
+{% extends 'appointments/persons/base.html' %}
+   
+{% block card %}
+
+
+<div class="container" >
+  <div class="row">
+
+      <div class="col col-2">
+
+        <a href="javascript:history.back()" id="get_back_link_text">
+
+          <div id='get_back_link_wrapper'>
+              <div class="get_back_button"> <h3>Назад</h3></div>
+          </div>
+
+        </a>
+
+    </div>
+
+  <div class="col col-7" id="card-wrapper">
+          <!-- <div class="col col-7"> -->
+            <!-- <h3>Персона</h3> -->
+            <br>
+            <h3> {{person.name}}</h3>
+            <form method="post">
+
+                {% csrf_token %}
+                
+                <div class="mb-3">
+                </div>
+
+                <div class="mb-3">
+                </div>
+
+                <div class="mb-3">
+                    
+
+                </div>
+                
+                <div class="mb-3">
+                    <h5>Должности</h5>
+                </div>
+                {% for pos in  positions %}
+                  <ul>
+                     
+                    <b>{{pos.date}}</b>
+                    {{pos.position}}
+                    <div class="mb-3">
+                      <p>
+                            <a class="btn btn-secondary" id="collapse{{ forloop.counter }}" data-bs-toggle="collapse" href="#collapseExample{{ forloop.counter }}" role="button" aria-expanded="false" aria-controls="collapseExample{{ forloop.counter }}">
+                              Документ &#9660;
+                            </a>
+    
+                      </p>
+                          <div class="collapse" id="collapseExample{{ forloop.counter }}">
+                            
+                          <div class="doc_bg", id="doc">
+                            <div class="doc_text">{{pos.full_text}}</div>
+                            
+                          </div>
+                            <br>
+                          </div>
+                    </div>
+    
+
+                  </ul>
+                  
+                {% endfor %}
+              </li>
+
+            </form>
+            <br>
+            <br>
+            <br>
+            
+          </div>
+
+          <div class="col col-2"> </div>
+
+        </div>
+
+        </div>
+
+
+{% endblock %}
+
+
+

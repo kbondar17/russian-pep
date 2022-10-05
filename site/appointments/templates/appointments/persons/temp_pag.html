@@ -1,0 +1,39 @@
+
+    {% block pagination %}
+    {% for page_number in page_obj.paginator.get_elided_page_range %}
+        {% if page_number == page_obj.paginator.ELLIPSIS %}
+        <!-- точки -->
+        {{page_number}}
+  {% else %}
+      <a href="{% my_relative_url page_number 'page' request.GET.urlencode %}">
+        {{page_number}}
+    </a>
+
+        {% endif %}
+    {% endfor %}
+
+    {% if page_obj.has_previous %}
+        <a href="">
+            Previous Page
+        </a>
+    {% endif%}
+
+    <!-- {% if page_obj.has_next %}
+        <a >
+            Next Page
+        </a>
+    {% endif%}
+
+    {% if page_obj.has_previous %}
+    <a href="">
+        First Page
+    </a>
+{% endif%} -->
+
+{% if page_obj.has_next %}
+    <a href="">
+        Last Page
+    </a>
+
+
+{% endif%}

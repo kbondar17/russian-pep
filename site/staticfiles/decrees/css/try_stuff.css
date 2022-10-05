@@ -1,0 +1,47 @@
+.grey_background {
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(100, 100, 100, 0.4);
+    /* background-color: rgba(red, green, blue, 1); */
+    /* z-index: -1; */
+}
+
+.grey_background.visible {
+    visibility: visible;
+}
+
+
+
+.my_modal {
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    border: 1px solid black;
+    /* z-index: -1; */
+    opacity: 0;
+}
+
+.my_modal.open {
+    opacity: 1;
+    transition: opacity .5s;
+    z-index: 100;
+
+}
+
+
+.my_modal.closing {
+    transition: opacity .3s;
+    border: none;
+    opacity: 0;
+
+}
+
+
+.ldBar-label {
+    visibility: hidden;
+
+}
