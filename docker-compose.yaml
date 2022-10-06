@@ -14,7 +14,7 @@ services:
     build: 
       context: ./site
       dockerfile: ./MyDockerfile
-    command: /bin/bash -c 'source init_db.sh'
+    command: /bin/bash -c 'source init_db.sh && source init_app.sh'
     volumes:
       - ./site:/code
     ports:
