@@ -23,8 +23,7 @@
             <h3>Событие</h3>
             <br>
             <h1></h1>
-            <form method="post">
-
+            
                 {% csrf_token %}
 
                 <div class="mb-3">
@@ -51,23 +50,15 @@
                         </a>
 
                   </p>
-
                       <div class="collapse" id="collapseExample">
                         {{event.full_text}}
                         <br>
-                          {% if download_link %}
-                          <!-- <a href="{{ download_link }}"> <button  class="btn btn-primary">Скачать </button> </a> -->
-                        {% endif %}
+                        <br>
+                          <a href="{{ event.link }}"> <button  class="btn btn-primary">оригинал</button> </a>
 
-                        <button id="download_link" class="btn btn-primary"><a id='download_link' href="{{ download_link }}">скачать</a></button>                                                
 
                       </div>
                 </div>
-
-                <button type="submit" class="btn btn-primary">Сохранить изменения </button>
-                <!-- <button id="delete_event_button" type="button" class="btn btn-light">Удалить событие</button> -->
-                  
-            </form>
             <br>
             <br>
             <br>

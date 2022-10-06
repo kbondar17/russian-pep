@@ -21,7 +21,6 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
-    # 'converter.models.MyUser',
     'django.contrib.staticfiles', 
     'django.contrib.admin',
     'django.contrib.auth',
@@ -74,9 +73,6 @@ TEMPLATES = [
 WSGI_APPLICATION = 'app.wsgi.application'
 
 
-print('BASE_DIR==', BASE_DIR)
-
-
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
@@ -107,6 +103,9 @@ STATICFILES_FINDERS = (
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = 'static/'
+
+LANGUAGE_CODE = 'ru'
+
 
 # Extra places for collectstatic to find static files.
 STATICFILES_DIRS = (

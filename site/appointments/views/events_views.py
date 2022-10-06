@@ -67,12 +67,14 @@ class EventDetail(DetailView):
     template_name = 'appointments/persons/event_detail.html'
     context_object_name = 'event'
 
-    def get_queryset(self):
+    def get_queryset(self, *args, **kwargs):
         pna = PersonsNAppointments.objects.\
             annotate(name=F('person__name'),
                      position=F('app_line__position'),
                      full_text=F('app_line__appoint_doc__text_raw'),
+                     link=F('app_line__appoint_doc__url'),
                      date=F('app_line__appoint_doc__date'),
                      pers_id=F('person__id')
                      ).order_by('-date')
-        return pna.values('id', 'name', 'position', 'date', 'action', 'pers_id', 'full_text')
+        print(pna[0].link)
+        return pna.values('id', 'name', 'position', 'date', 'link', 'action', 'pers_id', 'full_text')

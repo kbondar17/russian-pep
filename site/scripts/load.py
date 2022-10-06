@@ -54,7 +54,7 @@ def upload_to_db(file):
                     #     not_processed_persons.append(pers)
 
                     # for person_object in persons:
-                    pna, _ = PersonsNAppointments.objects.get_or_create(app_line=app_line_object, person=person, action='appoint')
+                    pna, _ = PersonsNAppointments.objects.get_or_create(app_line=app_line_object, person=person, action='назначение')
                     print('Загрузили ', pna, _)
 
 
@@ -64,7 +64,7 @@ def upload_to_db(file):
                     person, _ = Person.objects.get_or_create(name=pers) 
                     
                     
-                    pna, _ = PersonsNAppointments.objects.get_or_create(app_line=app_line_object, person=person, action='resign')
+                    pna, _ = PersonsNAppointments.objects.get_or_create(app_line=app_line_object, person=person, action='отставка')
                     print('Загрузили ', pna, _)
         except Exception as ex:
             print('ОШИБКА -- ',ex, doc_id)

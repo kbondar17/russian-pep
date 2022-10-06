@@ -14,7 +14,7 @@ services:
     build: 
       context: ./site
       dockerfile: ./MyDockerfile
-    command: /bin/bash -c "sleep 999" #init_db.sh
+    command: /bin/bash -c 'source init_db.sh'
     volumes:
       - ./site:/code
     ports:
@@ -23,6 +23,7 @@ services:
       - .env
     depends_on:
       - db
+      - redis
     restart: always
         
   redis:

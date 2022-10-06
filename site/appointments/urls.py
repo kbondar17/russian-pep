@@ -17,9 +17,9 @@ urlpatterns = [
     path('person_all/', PersonsList.as_view(), name='person-list'),
     path('person_all/<str:query>', PersonsList.as_view(), name='person-list-query'),
 
-    path('events/', EventList.as_view(), name='show-all-events',),
-    path('events/<str:query>', EventList.as_view(), name='show-all-events',),
     path('events/<int:pk>', EventDetail.as_view(), name='event-detail'),
+    path('events/<str:query>', EventList.as_view(), name='show-all-events',),
+    path('events/', EventList.as_view(), name='show-all-events',),
 
 
 ]
