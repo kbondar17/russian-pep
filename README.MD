@@ -4,8 +4,8 @@ Constantly and automatically updated database of Russian public servants and boa
 
 Used by Transparency International Russia to keep its' databases updated.
 ***
-To run project locally. The DB will be populated with some test data.
-
+To run project locally. 
 ```
 docker-compose up
 ```
+The DB will be populated with some test data.
