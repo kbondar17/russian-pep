@@ -9,7 +9,3 @@ Used by Transparency International Russia to keep its' databases updated.
 ```
 docker-compose up
 ```
-## Требования
-* Python >= 3.10.2
-* [requirements.txt](https://github.com/kbondar17/russian-pep/blob/main/site/requirements.txt) 
-
