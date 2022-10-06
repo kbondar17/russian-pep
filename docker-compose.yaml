@@ -3,8 +3,11 @@ services:
     image: postgres:13
     env_file:
       - .env
+    expose:
+      - 5433
     ports:
-      - 5432:5432
+      - 5433:5433
+    command: -p 5433    
     restart: always
 
   web:
