@@ -19,7 +19,7 @@ app.conf.timezone = 'Europe/Moscow'
 app.autodiscover_tasks()
 
 
-"""Это работает"""
+
 @app.on_after_configure.connect
 def setup_periodic_tasks(sender, **kwargs):
     from app.celery_tasks.tasks import get_new_appointments
