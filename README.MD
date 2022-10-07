@@ -8,4 +8,4 @@ To run project locally. Don't forget to write your own .env file!
 ```
 docker-compose up
 ```
-The DB will be populated with some test data.
+Celery task updates DB every 24 hours.
